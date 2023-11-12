@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device, initial-scale=1.0">
+        <title>Community Gardening</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+   
+    </head>
+    <body class="h-screen bg-[url('images/image.png')] bg-center  flex items-center justify-center">
+        
+        <div class="container relative w-full h-full">
+            <div class="guidelines"></div>
+            <div id="navContainer"></div>          
+
+            <div class="text-white mt-48">
+                <h1 class="text-6xl font-semibold leading-normal">Cultivating Community </h1>
+                <h1 class="text-4xl font-medium leading-normal">An introduction to community gardening</h1>
+                
+                <div class="flex mt-12">
+                <div>
+                    <a href="about.html" class="bg-[#83D34F] rounded-3xl py-3 px-8 font-medium text-xl inline-block mr-4 hover:bg-transparent hover:border-[#83D34F] hover:text-white hover:border-4 duration-300 border-4 border-transparent">Our Mission</a>
+                </div>
+                <div class="px-8">
+                    <a href="getStarted.html" class="bg-[#83D34F] rounded-3xl py-3 px-8 font-medium text-xl inline-block mr-4 hover:bg-transparent hover:border-[#83D34F] hover:text-white hover:border-4 duration-300 border-4 border-transparent">Get Started</a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Use JavaScript to dynamically load the navigation section
+            fetch('nav.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navContainer').innerHTML = data;
+                });
+        </script>
+    </body>
+   
+</html>

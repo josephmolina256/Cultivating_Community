@@ -1,0 +1,56 @@
+<!-- mission.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Mission - Community Gardening</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-[url('images/image.png')] bg-center flex items-center justify-center">
+    <div class="container relative w-full h-full">
+        <div class="guidelines"></div>
+
+        <!-- This empty div will be populated by the navigation section -->
+        <div id="navContainer"></div>
+
+        <!-- Our Mission Content -->
+        <div class="text-white mt-32">
+            <h1 class="text-6xl font-semibold leading-normal">Our Mission</h1>
+            <p class="text-lg mt-4">
+                At Community Gardening, our mission is to create a positive impact on individuals and communities
+                through the practice of communal gardening. We believe in the power of gardening to address
+                various issues, including food insecurity and the existence of food deserts.
+            </p>
+
+            <p class="text-lg mt-4">
+                Community gardening not only provides fresh and locally grown produce but also promotes
+                community engagement, fosters a sense of belonging, and enhances overall well-being. By
+                addressing issues related to food accessibility, we aim to contribute to the creation of healthier,
+                more sustainable communities.
+            </p>
+
+            <p class="text-lg mt-4">
+                Join us in our mission to cultivate community bonds and make a positive impact on the
+                environment and the well-being of individuals and families.
+            </p>
+
+            <div class="mt-10">
+                <a href="getStarted.html" class="bg-[#83D34F] rounded-3xl py-3 px-8 font-medium text-xl inline-block mr-4 hover:bg-transparent hover:border-[#83D34F] hover:text-white hover:border-4 duration-300 border-4 border-transparent">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Use JavaScript to dynamically load the navigation section
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navContainer').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
